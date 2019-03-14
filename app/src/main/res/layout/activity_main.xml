@@ -6,14 +6,95 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:background="#e8e8e8">
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                android:layout_weight="1">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Puntaje"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+                <TextView
+                        android:id="@+id/tv_current_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"/>
+                <!--
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="High Score"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+                <TextView
+                        android:id="@+id/tv_high_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"/>
+                 -->
+            </LinearLayout>
+            <Button
+                    android:id="@+id/btn_restart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reiniciar"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abajo"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Derecha"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Izquierda"/>
+        </LinearLayout>
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#000"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9">
+            <com.example.tetrisjtoru.view.Tetris android:layout_width="match_parent"
+                                                 android:id="@+id/view_tetris"
+                                                 android:background="@android:color/white"
+                                                 android:layout_weight="8"
+                                                 android:layout_height="0dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_weight="2"
+                          android:layout_height="0dp">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
 
 </android.support.constraint.ConstraintLayout>
