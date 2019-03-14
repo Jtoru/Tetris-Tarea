@@ -59,18 +59,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Reiniciar"/>
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Abajo"/>
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Derecha"/>
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Izquierda"/>
         </LinearLayout>
         <View
                 android:layout_width="1dp"
@@ -78,17 +66,48 @@
                 android:background="#000"/>
         <LinearLayout
                 android:orientation="vertical"
+                android:background="@android:color/black"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="9">
             <com.example.tetrisjtoru.view.Tetris android:layout_width="match_parent"
                                                  android:id="@+id/view_tetris"
-                                                 android:background="@android:color/white"
+                                                 android:background="@android:color/black"
                                                  android:layout_weight="8"
                                                  android:layout_height="0dp"/>
             <LinearLayout android:layout_width="match_parent"
-                          android:layout_weight="2"
-                          android:layout_height="0dp">
+                          android:orientation="horizontal"
+
+                          android:layout_height="wrap_content">
+                <Button
+                        android:layout_width="0dp"
+                        android:id="@+id/btn_down"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="Abajo"/>
+                <Button
+                        android:layout_width="0dp"
+                        android:id="@+id/btn_rotate"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="Rotar"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:layout_height="wrap_content">
+                <Button
+                        android:layout_width="0dp"
+                        android:id="@+id/btn_left"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="Izquierda"/>
+                <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:id="@+id/btn_right"
+                        android:layout_height="wrap_content"
+                        android:text="Derecha"/>
 
             </LinearLayout>
         </LinearLayout>

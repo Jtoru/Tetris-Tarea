@@ -15,6 +15,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var tetris : Tetris
     private val model = Game()
 
+    lateinit var downBtn : Button
+    lateinit var rotateBtn : Button
+    lateinit var leftBtn : Button
+    lateinit var rightBtn : Button
+
     //https://books.google.co.cr/books?id=OrZTDwAAQBAJ&pg=PA137&lpg=PA137&dq=tetris+android+kotlin&source=bl&ots=zPI0VJogd_&sig=ACfU3U0Ml6XLvIa_cqdiCDFz_XwryXntuA&hl=es-419&sa=X&ved=2ahUKEwjY8PaVxf_gAhWIzlkKHfCABZ4Q6AEwDHoECAIQAQ#v=onepage&q=tetris%20android%20kotlin&f=false
 
 
@@ -24,6 +29,24 @@ class MainActivity : AppCompatActivity() {
         restartBtn = findViewById(R.id.btn_restart)
         score = findViewById(R.id.tv_current_score)
         tetris = findViewById(R.id.view_tetris)
+        downBtn = findViewById(R.id.btn_down)
+        rotateBtn = findViewById(R.id.btn_rotate)
+        leftBtn = findViewById(R.id.btn_left)
+        rightBtn = findViewById(R.id.btn_right)
+
+        downBtn.setOnClickListener {
+            moveElement(Game.Motions.DOWN)
+        }
+        rotateBtn.setOnClickListener {
+            moveElement(Game.Motions.ROTATE)
+        }
+        leftBtn.setOnClickListener {
+            moveElement(Game.Motions.LEFT)
+        }
+        rightBtn.setOnClickListener {
+            moveElement(Game.Motions.RIGHT)
+        }
+
         tetris.setActivity(this)
         tetris.setModel(model)
 
